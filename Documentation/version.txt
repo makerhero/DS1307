@@ -1,0 +1,4 @@
+Version:
+	1.0	 4 Oct 2010  -  initial release
+	1.1	26 Jan 2012  -  Added support for Arduino 1.0 IDE
+	
