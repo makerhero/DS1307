@@ -1,6 +1,7 @@
 /*
   DS1307.cpp - Arduino library support for the DS1307 I2C Real-Time Clock
   Copyright (C)2015 Rinky-Dink Electronics, Henning Karlsen. All right reserved
+  Copyright (C)2018 Spacial. All right reserved
   
   This library has been made to easily interface and use the DS1307 RTC with
   the Arduino without needing the Wire library.
