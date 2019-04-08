@@ -99,7 +99,7 @@ void DS1307::setDOW(uint8_t dow)
 
 char *DS1307::getTimeStr(uint8_t format)
 {
-	char *output= "xxxxxxxx";
+	char *output= (char*)"xxxxxxxx";
 	Time t;
 	t=getTime();
 	if (t.hour<10)
@@ -130,7 +130,7 @@ char *DS1307::getTimeStr(uint8_t format)
 
 char *DS1307::getDateStr(uint8_t slformat, uint8_t eformat, char divider)
 {
-	char *output= "xxxxxxxxxx";
+	char *output= (char*)"xxxxxxxxxx";
 	int yr, offset;
 	Time t;
 	t=getTime();
@@ -245,31 +245,31 @@ char *DS1307::getDateStr(uint8_t slformat, uint8_t eformat, char divider)
 
 char *DS1307::getDOWStr(uint8_t format)
 {
-	char *output= "xxxxxxxxx";
+	char *output= (char*)"xxxxxxxxx";
 	Time t;
 	t=getTime();
 	switch (t.dow)
 	{
 		case MONDAY:
-			output="Monday";
+			output=(char*)"Monday";
 			break;
 		case TUESDAY:
-			output="Tuesday";
+			output=(char*)"Tuesday";
 			break;
 		case WEDNESDAY:
-			output="Wednesday";
+			output=(char*)"Wednesday";
 			break;
 		case THURSDAY:
-			output="Thursday";
+			output=(char*)"Thursday";
 			break;
 		case FRIDAY:
-			output="Friday";
+			output=(char*)"Friday";
 			break;
 		case SATURDAY:
-			output="Saturday";
+			output=(char*)"Saturday";
 			break;
 		case SUNDAY:
-			output="Sunday";
+			output=(char*)"Sunday";
 			break;
 	}     
 	if (format==FORMAT_SHORT)
@@ -279,46 +279,46 @@ char *DS1307::getDOWStr(uint8_t format)
 
 char *DS1307::getMonthStr(uint8_t format)
 {
-	char *output= "xxxxxxxxx";
+	char *output= (char*)"xxxxxxxxx";
 	Time t;
 	t=getTime();
 	switch (t.mon)
 	{
 		case 1:
-			output="January";
+			output=(char*)"January";
 			break;
 		case 2:
-			output="February";
+			output=(char*)"February";
 			break;
 		case 3:
-			output="March";
+			output=(char*)"March";
 			break;
 		case 4:
-			output="April";
+			output=(char*)"April";
 			break;
 		case 5:
-			output="May";
+			output=(char*)"May";
 			break;
 		case 6:
-			output="June";
+			output=(char*)"June";
 			break;
 		case 7:
-			output="July";
+			output=(char*)"July";
 			break;
 		case 8:
-			output="August";
+			output=(char*)"August";
 			break;
 		case 9:
-			output="September";
+			output=(char*)"September";
 			break;
 		case 10:
-			output="October";
+			output=(char*)"October";
 			break;
 		case 11:
-			output="November";
+			output=(char*)"November";
 			break;
 		case 12:
-			output="December";
+			output=(char*)"December";
 			break;
 	}     
 	if (format==FORMAT_SHORT)
@@ -587,3 +587,4 @@ uint8_t DS1307::peek(uint8_t addr)
 	else
 		return 0;
 }
+
